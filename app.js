@@ -7,8 +7,10 @@ const router=require("./routes/routes")
 const notFound = require("./middlewares/notfound");
 const errorHandler = require("./middlewares/errorHandler");
 const express = require("express");
+const home=require("./middlewares/homePage")
 const app = express();
 
+app.use('/',home)
 app.use(express.json());
 app.use('/api/v1',router)
 
