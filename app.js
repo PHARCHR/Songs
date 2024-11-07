@@ -10,7 +10,7 @@ const express = require("express");
 const home=require("./middlewares/homePage")
 const app = express();
 
-app.use('/',home)
+app.use(home)
 app.use(express.json());
 app.use('/api/v1',router)
 
